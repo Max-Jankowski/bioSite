@@ -1,0 +1,101 @@
+/* 
+    Max Jankowski
+	Bellevue University 
+	CSD340 Module 6.3
+    2/16/2026
+ */
+
+/* Focusing on the atoms like the body and headings. For molecules I startred with a basic container and header nothing really fancy yet. Awaiting feedback from wireframes. 
+Images will be shifted around more to the side of the page once page is more fleshed out */
+
+/* adding universal selector to support differnt browsers, https://www.geeksforgeeks.org/css/css-all-selector/ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* HEADER - Colored banner */
+header {
+    background-color: #2C5F2D;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* styling body with a traditional font and colors that align with palette I picked out */
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #F5F1E8;
+    padding: 20px;
+}
+
+/* headings styles */
+h1 {
+    font-size: 2.5em;
+    font-weight: 400;
+    color: #F5F1E8;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 400;
+    color: #2C5F2D;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #4A5568;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+/* Simple container style */
+#container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+/* body of the text styling in paragraphs */
+p {
+    margin-bottom: 1em;
+    line-height: 1.8;
+}
+
+/* responsive images based on browser*/
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1em 0;
+}
+
+/* links styling, just simple color for now*/
+a {
+    color: #87CEEB;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D4A574;
+}
+
+/* basic strucure for lists  */
+ul {
+    margin: 1em 0 1em 2em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* creating a very basic footer section*/
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #2C5F2D;
+    color: #666;
+}
