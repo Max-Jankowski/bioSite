@@ -1,101 +1,436 @@
 /* 
     Max Jankowski
-	Bellevue University 
-	CSD340 Module 6.3
-    2/15/2026
- */
+    Bellevue University 
+    CSD-340 Module 7 assignment
+    2/21/2026
+   
 
-/* Focusing on the atoms like the body and headings. For molecules I startred with a basic container and header nothing really fancy yet. Awaiting feedback from wireframes. 
-Images will be shifted around more to the side of the page once page is more fleshed out */
 
-/* adding universal selector to support differnt browsers, https://www.geeksforgeeks.org/css/css-all-selector/ */
+	Additions to module 5 assignment css:
+    header (h1+nav), hero section, bio-section, social-links div, footer
+    
+*/
+
+
+/* Universal selector reset - ensures consistent rendering across browsers
+   https://www.geeksforgeeks.org/css/css-all-selector/ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* HEADER - Colored banner */
-header {
-    background-color: #2C5F2D;
-    padding: 40px 20px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-/* styling body with a traditional font and colors that align with palette I picked out */
+
+/* sets the base font, color, and background for all pages */
 body {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: Georgia, 'Times New Roman', serif; /* Traditional serif per design choice */
     font-size: 16px;
     line-height: 1.6;
     color: #333333;
-    background-color: #F5F1E8;
-    padding: 20px;
+    background-color: #F5F1E8; /* off white cream background */
+    padding-bottom: 40px;
 }
 
-/* headings styles */
+
+/*Gernarl typography for headings and paragraphs within page*/
+
 h1 {
     font-size: 2.5em;
     font-weight: 400;
-    color: #F5F1E8;
+    color: #F5F1E8; /* Light cream background color, this time sits on a dark green background */
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: 400;
-    color: #2C5F2D;
-    margin-top: 1.5em;
+    color: #2C5F2D; /* forest green for headings  */
+    margin-top: 1.2em;
     margin-bottom: 0.5em;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 400;
-    color: #4A5568;
+    color: #4A5568; /* greyish green for subheadings, I just went with it, under time crunch */
     margin-top: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.4em;
 }
-/* Simple container style */
-#container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-/* body of the text styling in paragraphs */
+
 p {
     margin-bottom: 1em;
     line-height: 1.8;
 }
 
-/* responsive images based on browser*/
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1em 0;
-}
-
-/* links styling, just simple color for now*/
-a {
-    color: #87CEEB;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #D4A574;
-}
-
-/* basic strucure for lists  */
+/*  spacing for all unordered lists */
 ul {
-    margin: 1em 0 1em 2em;
+    margin: 0.8em 0 1em 2em;
 }
 
 li {
     margin-bottom: 0.5em;
+    line-height: 1.7;
 }
 
-/* creating a very basic footer section*/
+
+/* All about those links*/
+
+/* thd default inline link style */
+a {
+    color: #87CEEB; /* light blue from palette */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #D4A574; /* Warm gold on hover */
+    text-decoration: underline;
+}
+
+/* to sperate external links from onboard one, not used really but will add for the future for still working on the page */
+.external-link {
+    color: #2C5F2D; /* Forest green for external links */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.external-link:hover {
+    color: #D4A574;
+}
+
+/* all images are responsive and block-level needed to still do cropping for fitment */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Work for the header */
+
+header {
+    background-color: #2C5F2D; /* Forest green - primary brand color */
+    padding: 30px 20px 0 20px;
+    text-align: center;
+    margin-bottom: 0; /* Nav sits below h1 */
+}
+
+header h1 {
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+
+/* site navigation that sits right below the header */
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 0;
+    background-color: #1e4a1f; /* Slightly darker green strip under h1 */
+    margin: 0 -20px; /* Extends full width despite header padding */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* navigation bar links style */
+.nav-link {
+    color: #F5F1E8;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 3px;
+    font-family: Georgia, serif;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease; /* Smooth hover transition */
+}
+
+.nav-link:hover {
+    background-color: #2C5F2D;
+    color: #F5F1E8;
+    text-decoration: none;
+}
+
+/* High lighting the page the user is on */
+.nav-link.active {
+    background-color: #2C5F2D;
+    color: #D4A574; /* Gold accent for active page */
+    font-weight: bold;
+}
+
+
+/*  Main wroper that all containers will share across the three pages */
+
+#container {
+    max-width: 900px;
+    margin: 30px auto;  /* content is centered horizontally */
+    padding: 0 20px;
+}
+
+/* Main element that wraps the container on all pages */
+main {
+    padding-top: 10px;
+}
+
+
+/* Main image that is full width and has caption, this is used for index and hobbies top */
+.hero-figure {
+    width: 100%;
+    margin: 0 0 1.5em 0;
+    border-radius: 4px;
+    overflow: hidden; /* cliping image corners with a radius */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* provides some depth to the image */
+}
+
+.hero-figure img {
+    width: 100%;
+    height: 500px;              /* taller frame shows more of the photo, but will still need to crop some images */
+    object-fit: cover;          /* crops image to fill space without stretching */
+    object-position: center center; /* cropped image allows to show more of the full scene */
+}
+
+/* Captions below images, https://www.w3.org/Style/Examples/007/figures.en.html */
+.hero-figure figcaption {
+    background-color: #2C5F2D;
+    color: #F5F1E8;
+    padding: 8px 14px;
+    font-size: 0.88em;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* Intro text style  */
+
+.intro-text {
+    font-size: 1.5em;  /* icrease a bit to have more impact on page */
+    text-align: center;
+    color: #4A5568;
+    margin: 1em 0 1.5em 0;
+    font-style: italic;
+}
+
+/* Bio section organism: flexbox row for image + text side by side */
+.bio-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #c5b99a; /* Warm divider between sections */
+}
+
+/* Reverse variant: flips image and text order (wireframe alternates sides) 
+.bio-section--reverse {
+    flex-direction: row-reverse; 
+} removed for now as I believe it is effecting the HTML order. */
+
+/* Bio figure molecule: image with caption in side-by-side layout */
+.bio-figure {
+    flex: 0 0 280px; /* Fixed width, doesn't grow or shrink */
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.bio-figure img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Figcaption shared style for bio image captions, https://www.w3.org/Style/Examples/007/figures.en.html */
+.bio-figure figcaption {
+    background-color: #2C5F2D;
+    color: #F5F1E8;
+    padding: 6px 12px;
+    font-size: 0.82em;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Bio text molecule: the text content beside each image */
+.bio-text {
+    flex: 1; /* Takes remaining space beside the image */
+}
+
+.bio-text h2 {
+    margin-top: 0; /* Overrides default top margin when inside flex container */
+}
+
+
+/* For hobbies page  */
+
+.hobby-section {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #c5b99a;
+}
+
+/* Side by side variation for image and content -->*/
+.hobby-section--side {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* this is a molecule for text conent in hobbies page */
+.hobby-content {
+    flex: 1;
+}
+
+.hobby-content h2 {
+    margin-top: 0;
+}
+
+
+/* Page nav container for top of page centers the nav buttons */
+.page-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0 20px 0;
+}
+
+/* styled anchor links that look like buttons, https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Styling_links */
+.btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background-color: #2C5F2D;
+    color: #F5F1E8;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: Georgia, serif;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #D4A574; /* Gold on hover */
+    color: #333333;
+    text-decoration: none;
+}
+
+
+/* Block of css for clickable image links
+https://www.digitalocean.com/community/tutorials/how-to-create-a-static-footer-with-html-and-css-section-7 */
+
+.social-links {
+    text-align: center;
+    margin: 20px 0 30px 0;
+    padding: 15px;
+    border-top: 1px solid #c5b99a;
+}
+
+.social-label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* clickable anchor for each social media link image */
+.social-link {
+    display: inline-flex;       /* Flexbox centers the icon inside the link */
+    align-items: center;
+    justify-content: center;
+    margin: 0 6px;
+    padding: 8px;
+    border: 1px solid #2C5F2D;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    vertical-align: middle;
+}
+
+/* making all svg image files uniform for soc. media links */
+.social-link img {
+    width: 28px;               /* Making sure that icons are the same size */
+    height: 28px;              /* Like the width, geting standardization over icons */
+    display: block;
+    object-fit: contain;       /* maintains ratio of icon size */
+}
+
+.social-link:hover {
+    background-color: #2C5F2D; /* Green fill on hover */
+    border-color: #2C5F2D;
+    text-decoration: none;
+}
+
+/* icon color effect when hovering so dark icons show on green background */
+.social-link:hover img {
+    filter: brightness(0) invert(1);
+}
+
+
+/* Modified footer for this module */
+
 footer {
     text-align: center;
     margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #2C5F2D;
-    color: #666;
+    padding: 20px;
+    background-color: #2C5F2D; /* Matches header for bookend consistency */
+    color: #F5F1E8;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* Added responsive design to allow for viewing on various devices and screens 
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design */
+
+/* 768px and below */
+@media (max-width: 768px) {
+
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.4em; }
+
+    /* Stack bio sections vertically on tablet */
+    .bio-section,
+    .bio-section--reverse,
+    .hobby-section--side {
+        flex-direction: column;
+    }
+
+    /* Full width images on average tablet */
+    .bio-figure {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    .bio-figure img,
+    .hero-figure img {
+        height: 250px;
+    }
+
+    .site-nav {
+        flex-wrap: wrap;
+    }
+}
+
+/* Many Cellphones */
+@media (max-width: 480px) {
+
+    h1 { font-size: 1.5em; }
+
+    .hero-figure img {
+        height: 200px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 0.9em;
+    }
+
+    .social-link {
+        margin: 4px;
+        display: inline-block;
+    }
+
+    .page-nav {
+        flex-direction: column;
+        align-items: center;
+    }
 }

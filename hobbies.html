@@ -1,76 +1,158 @@
-    <!--         
-        Max Jankowski
-        Bellevue University 
-		CSD340 module 6.3 
-		Hobbies HTML file
-    -->
+<!-- 
+    Max Jankowski
+    Bellevue University 
+    CSD-340 Module 7.3
+	hobbies page
+    Modified from the module 6 assignment
+-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessica - Hobbies</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <!-- header for hobbies and jessica's recommendations -->
+
+    <!-- Shared header with different text, but with the same navigation bar -->
     <header>
         <h1>Jess's Treks and Recommendations</h1>
+
+        <!-- shared navi bar, not sure if Im keeping the lower navi buttons yet -->
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="hobbies.html" class="nav-link active">Hobbies</a>
+        </nav>
     </header>
 
-    <!-- building content container, contains qoutes from the interview -->
-    <div id="container">
-        
-        <!-- section 1 -->
-        <h2>Resources for Trip Planning</h2>
-        <img src="images/Top_of_the_world.jpg" alt="Jessica at mountain summit">
-        <h3>Safety First</h3>
-        <p>I learned the hard way that over-confidence is the best way to get into trouble.</p>
-        <h3>Essential Gear</h3>
-        <ul> <!-- creating unordered lists for all three sections--> 
-            <li>GPS with emergency call feature</li>
-            <li>Weather monitoring apps</li>
-            <li>Trail-specific gear</li>
-        </ul>
+    <!-- Main content -->
+    <main>
+        <div id="container">
 
-        <!-- section 2 -->
-        <h2>What Jessica Likes</h2>
-        <img src="images/Summit.jpg" alt="Jessica at Mt. Belford summit">
-        <h3>AllTrails Contributions</h3>
-        <p>Active contributor documenting Colorado, Utah, and New Mexico trails.</p>
-        <h3>Why She Hikes</h3>
-        <p>Hiking became a way to decompress and get away from people. Being out on the trails reminds me to experience the little beautiful imperfections in life.</p>
+            <!-- Part 1 of the hobbies page, includes essential gear with external links. going to test the css styles for external links  -->
+            <section class="hobby-section">
+                <!-- Image and caption, pictured centered to add variation. staggered pictures to match wireframe -->
+                <figure class="hero-figure">
+                    <img src="images/Top_of_the_world.jpg" alt="Jessica at a mountain summit in Colorado">
+                    <figcaption>Jessica at the summit — a reminder that preparation and patience get you to the top.</figcaption>
+                </figure>
 
-        <!-- section 3 -->
-        <h2>Stay Safe Out There</h2>
-        <img src="images/Checking_in.jpg" alt="Jessica with GPS device">
-        <h3>Safety Gear:</h3>
-        <ul>
-            <li>GPS with emergency beacon</li>
-            <li>Weather-appropriate layers</li>
-            <li>First aid kit</li>
-            <li>Extra water and snacks</li>
-        </ul>
+                <!-- content for top of the main,  -->
+                <div class="hobby-content">
+                    <h2>Resources for Trip Planning</h2>
 
-        <!-- Linking to other html files in same folder -->
-        <div>
-            <a href="index.html">Back Home</a>
-            <a href="about.html">About</a>
+                    <h3>Safety First</h3>
+                    <p>I learned the hard way that over-confidence is the best way to get into trouble. Every trail demands respect regardless of difficulty rating.</p>
+
+                    <h3>Essential Gear</h3>
+                    <!-- A generic list of jessicas suggestions, added external links  -->
+                    <p>Jessica recommends starting every trip plan on 
+                        <a href="https://www.alltrails.com" target="_blank" rel="noopener noreferrer" class="external-link">AllTrails</a> 
+                        for current trail conditions and user reviews.
+                    </p>
+                    <ul>
+                        <li>
+                            <a href="https://www.garmin.com/en-US/p/1756401/pn/010-03387-00/" class="external-link" target="_blank" rel="noopener noreferrer">GPS with emergency call feature</a>
+                        </li>
+                        <li>
+                            <a href="https://opensnow.com/" class="external-link" target="_blank" rel="noopener noreferrer">Weather monitoring apps</a>
+                        </li>
+                        <li>
+                            <a href="https://www.rei.com/learn/expert-advice/day-hiking-checklist.html" class="external-link" target="_blank" rel="noopener noreferrer">Trail-specific gear</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- part 2 of the hobbies page. need to alternate which side text and image is on to match initial wireframes  -->
+            <section class="hobby-section hobby-section--side">
+
+                <!-- moving content text to the left and image right -->
+                <div class="hobby-content">
+                    <h2>What Jessica Likes</h2>
+
+                    <h3>AllTrails Contributions</h3>
+                    <p>Active contributor documenting Colorado, Utah, and New Mexico trails. 
+                        Check out her contributions on 
+                        <a href="https://www.alltrails.com" target="_blank" rel="noopener noreferrer" class="external-link">AllTrails</a>. <!-- added addition alltrails link, slightly repeatative. look into removing lower section links--> 
+                    </p>
+
+                    <h3>Why She Hikes</h3>
+                    <p>Hiking became a way to decompress and get away from people. Being out on the trails reminds me to experience the little beautiful imperfections in life.</p>
+                </div>
+
+                <!-- section image with caption -->
+                <figure class="bio-figure">
+                    <img src="images/Summit.jpg" alt="Jessica at Mt. Belford summit">
+                    <figcaption>Jessica at the Mt. Belford summit, one of Colorado's 14ers.</figcaption>
+                </figure>
+            </section>
+
+            <!-- ===================== SECTION 3 ===================== 
+                 ORGANISM: Image with caption (left) + safety gear content (right)
+                 Matches wireframe: image left, safety gear content right
+            -->
+            <section class="hobby-section hobby-section--side">
+
+                <!-- ORGANISM: Image with caption - left side -->
+                <figure class="bio-figure">
+                    <img src="images/Checking_in.jpg" alt="Jessica checking in with her GPS device on the trail">
+                    <figcaption>Jessica always checks in with her emergency GPS before heading out.</figcaption>
+                </figure>
+
+                <!-- Content molecule: right side -->
+                <div class="hobby-content">
+                    <h2>Stay Safe Out There</h2>
+
+                    <h3>Safety Gear:</h3>
+                    <ul>
+                        <li>GPS with emergency beacon</li>
+                        <li>Weather-appropriate layers</li>
+                        <li>First aid kit</li>
+                        <li>Extra water and snacks</li>
+                    </ul>
+
+                    <!-- External link: REI as a gear resource -->
+                    <p>Jessica recommends 
+                        <a href="https://www.rei.com" target="_blank" rel="noopener noreferrer" class="external-link">REI</a> 
+                        for gear selection and trail safety guides.
+                    </p>
+                </div>
+            </section>
+
+            <!-- lower section of this file is cut and past from other pages in file-->
+            <div class="page-nav">
+                <a href="index.html" class="btn">Back Home</a>
+                <a href="about.html" class="btn">About</a>
+            </div>
+
+            <!-- copy and pasted from index page -->
+            <div class="social-links">
+                <p class="social-label">Follow Jessica:</p>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <img src="images/x.svg" alt="X / Twitter">
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Indeed">
+                    <img src="images/indeed.svg" alt="Indeed">
+                </a>
+                <a href="https://www.alltrails.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="AllTrails">
+                    <img src="images/alltrails.svg" alt="AllTrails">
+                </a>
+            </div>
+
         </div>
+    </main>
 
-        <!-- Once again links that go nowhere for now -->
-        <div>
-            <a href="#">Twitter</a>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-        </div>
-    </div>
-
-    <!-- standard copy paste footer across files -->
+    <!--Shared footer, copy and pasted from index page-->
     <footer>
         <p>&copy; 2026 Jessica's bioSite</p>
     </footer>

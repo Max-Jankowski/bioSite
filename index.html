@@ -1,52 +1,76 @@
- <!--         
-       Max Jankowski
-       Bellevue University
-       CSD-340 Module 6.2 
-	   Landing/ homepage
-    -->
-	
-<!-- Very simple page layout for now, focusing on the basic elements and what from the bio and interview I would like to use -->
+`<!-- 
+    Max Jankowski
+    Bellevue University 
+    CSD-340 Module 7.3
+	Modified from the module 6 assignment
+   
+-->
 
 <!DOCTYPE html>
 <html lang="en">
-<head>   <!-- Boiler plate header setup -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessica - Home</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Connecing to sytles sheet -->
+    <link rel="stylesheet" href="styles.css"> <!-- Connecting to shared styles sheet -->
 </head>
 <body>
-    
-    <!-- header setup, working title  -->
+
+    <!-- Contains and use banner that is shared across the 3 pages, includes a navigation bar to use instead of lower links  -->
     <header>
         <h1>From Rental Cottage to Colorado Parcels</h1>
+
+        <!-- Site navigation links shared across all pages, shared accross pages, need to style them to highlght current page -->
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="hobbies.html" class="nav-link">Hobbies</a>
+        </nav>
     </header>
 
-    <!-- building a container to hold content with text and image -->
-    <div id="container">
-        
-        <!-- picture of jessica with the dog  -->
-        <img src="images/Jessica_on_Land.jpg" alt="Jessica with her dogs on Colorado land"> <!-- includeds discription below the picture -->
-        
-        <!-- Short snippet about  -->
-        <p>Chicago-born entrepreneur, outdoor enthusiast, and mother of two.</p>
+    <!--wraping the hero image with caption with the quick description of jess, this is the main body of content for the index Page
+		https://www.w3schools.com/howto/howto_css_hero_image.asp    -->
+    <main>
+        <div id="container">
 
-        <!-- links to other html files in the folder -->
-        <div>
-            <a href="about.html">About</a>
-            <a href="hobbies.html">Hobbies</a>
+            <!-- image figure with caption requirment for the assignment  -->
+            <figure class="hero-figure">
+                <img src="images/Jessica_on_Land.jpg" alt="Jessica with her dogs on her Colorado land parcel">
+                <figcaption>Jessica and her dogs on the family's land parcel in Fairplay, Colorado.</figcaption>
+            </figure>
+
+            <!-- introduction tag line -->
+            <p class="intro-text">Chicago-born entrepreneur, outdoor enthusiast, and mother of two.</p>
+
+            <!-- NAV MOLECULE: Page navigation buttons (About / Hobbies) -->
+            <div class="page-nav">
+                <a href="about.html" class="btn">About</a>
+                <a href="hobbies.html" class="btn">Hobbies</a>
+            </div>
+
+            <!-- Social media links at the bottom of page, will be shared across other files. media links go nowhere. never got permission to share with calss -->
+            <div class="social-links"> <!-- Pretty much copi and pasted this after writeing on the about page. -->
+               <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <img src="images/x.svg" alt="X / Twitter">
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Indeed">
+                    <img src="images/indeed.svg" alt="Indeed">
+                </a>
+                <a href="https://www.alltrails.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="AllTrails"> <!-- Only link that goes anywhere, never got my wifes permission to give out her social media info -->
+                    <img src="images/alltrails.svg" alt="AllTrails">
+                </a>
+            </div>
+
         </div>
+    </main>
 
-        <!-- blank social media links -->
-        <div>
-            <a href="#">Twitter</a>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-        </div>
-    </div>
-
-    <!-- footer with the subject of the page and year created  -->
+    <!--  A shared footer across the 3 pages -->
     <footer>
         <p>&copy; 2026 Jessica's bioSite</p>
     </footer>

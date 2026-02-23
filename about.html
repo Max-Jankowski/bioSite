@@ -1,64 +1,114 @@
-    <!-- 
-        Max Jankowksi
-        Bellevue University 
-		CSD-340 Module 6.3
-        About page HTML file
-    -->
+<!-- 
+    Max Jankowksi
+    Bellevue University 
+    CSD-340 Module 7
+	about page
+    Modified from the module 6 assignment
+-->
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-
-    <meta charset="UTF-8"> <!-- Boiler plate html header  -->
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jessica - About</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to css styles file -->
 </head>
 <body>
-    
-    <!-- header for top of page -->
+
+    <!-- Header shared with index page  -->
     <header>
         <h1>About Jess</h1>
+
+        <!-- Shared navi bar as index-->
+        <nav class="site-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link active">About</a>
+            <a href="hobbies.html" class="nav-link">Hobbies</a>
+        </nav>
     </header>
 
-    <!-- main content container, contains information from the short bio  -->
-    <div id="container">
-        
-        <!-- Image with a short blurb about jess. Image has discription of image part 1 -->
-        <h2>Early Foundations</h2>
-        <img src="images/Wedding.JPG" alt="Jessica on her wedding day">
-        <p>Born in 1985 in Chicago's Ridgewood neighborhood, Jessica learned the value of hard work at her grandmother's Michigan rental cottages starting at age 7.</p>
-        <p>After working her way through the hospitality industry, Jessica earned her undergraduate degree while building expertise in customer service and data analysis.</p>
+    <!-- main body that has containers for bio info-->
+    <main>
+        <div id="container">
 
-        <!-- Image with a short blurb about jess. Image has discription of image part 2 -->
-        <h2>The Colorado Chapter</h2>
-        <img src="images/Game_Carriage_sales.jpg" alt="Jessica at Game Carriage store">
-        <p>In 2010, Jessica and her husband made a bold move to Colorado, trading Lake Michigan beaches for Rocky Mountain peaks.</p>
-        <p>In 2016, they launched Game Carriage - a mobile board game store partnering with local breweries.</p>
+            <!-- First of the bio section on the about page, early life   -->
+            <section class="bio-section"> <!-- Image with caption -->                
+                <figure class="bio-figure">
+                    <img src="images/Wedding.JPG" alt="Jessica on her wedding day">
+                    <figcaption>Jessica on her wedding day in Chicago.</figcaption>
+                </figure>
 
-        <!-- Image with a short blurb about jess. Image has discription of image part 3 -->
-        <h2>Building a Future</h2>
-        <img src="images/With_Maggie.jpg" alt="Jessica with her daughter Magdalena">
-        <p>Jessica and her husband purchased a large parcel in Fairplay, Colorado. She created multiple revenue streams by leasing to ranchers and partnering with CU Boulder's agriculture department.</p>
-        <p>Now mother to Magdalena (2022) and Veronica (2025), Jessica balances family life with her passion for the outdoors.</p>
+                <!-- Short bio paragraph of jess's early years -->
+                <div class="bio-text">
+                    <h2>Early Foundations</h2> <!-- header for bio section -->
+                    <p>Born in 1985 in Chicago's Ridgewood neighborhood, Jessica learned the value of hard work at her grandmother's Michigan rental cottages starting at age 7.</p>
+                    <p>After working her way through the hospitality industry, Jessica earned her undergraduate degree while building expertise in customer service and data analysis.</p>
+                </div>
+            </section>
 
-        <!-- links to other html files on the site  -->
-        <div>
-            <a href="index.html">Back Home</a>
-            <a href="hobbies.html">Hobbies</a>
+            <!-- Bio section 2, the move to colorado and starting a business, left out the MBA for now to keep content equal  -->
+            <section class="bio-section">
+                <!-- content of bio section, class includes header and text -->
+                <div class="bio-text">
+                    <h2>The Colorado Chapter</h2>
+                    <p>In 2010, Jessica and her husband made a bold move to Colorado, trading Lake Michigan beaches for Rocky Mountain peaks.</p>
+                    <p>In 2016, they launched Game Carriage - a mobile board game store partnering with local breweries.</p>
+                </div>
+
+                <!-- image for section 2 -->
+                <figure class="bio-figure">
+                    <img src="images/Game_Carriage_sales.jpg" alt="Jessica at Game Carriage store">
+                    <figcaption>Jessica at a Game Carriage pop-up event at a local brewery.</figcaption>
+                </figure>
+            </section>
+
+            <!-- bio section 3, includes 3rd picture for the assignment. subject is were we are now post covid -->
+            <section class="bio-section">
+                <!-- image with discription -->
+                <figure class="bio-figure">
+                    <img src="images/With_Maggie.jpg" alt="Jessica with her daughter Magdalena">
+                    <figcaption>Jessica with her daughter Magdalena, born 2022.</figcaption>
+                </figure>
+
+                <!-- text body of section-->
+                <div class="bio-text">
+                    <h2>Building a Future</h2>
+                    <p>Jessica and her husband purchased a large parcel in Fairplay, Colorado. She created multiple revenue streams by leasing to ranchers and partnering with CU Boulder's agriculture department.</p>
+                    <p>Now mother to Magdalena (2022) and Veronica (2025), Jessica balances family life with her passion for the outdoors.</p>
+                </div>
+            </section>
+
+            <!-- Forward and back navigation links and buttons. not sure how to use these. Maybe place holders for other content -->
+            <div class="page-nav">
+                <a href="index.html" class="btn">Back Home</a>
+                <a href="hobbies.html" class="btn">Hobbies</a>
+            </div>
+
+            <!-- copy and pasted from index page -->
+            <div class="social-links">
+                <p class="social-label">Follow Jessica:</p>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <img src="images/x.svg" alt="X / Twitter">
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img src="images/facebook.svg" alt="Facebook">
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="images/instagram.svg" alt="Instagram">
+                </a>
+                <a href="#" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Indeed">
+                    <img src="images/indeed.svg" alt="Indeed">
+                </a>
+                <a href="https://www.alltrails.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="AllTrails"> <!-- Only link that goes anywhere, never got my wifes permission to give out her social media info -->
+                    <img src="images/alltrails.svg" alt="AllTrails">
+                </a>
+            </div>
+
         </div>
+    </main>
 
-        <!-- Blank links to social media, just using these to provide consistancy with mental models-->
-        <div>
-            <a href="#">Twitter</a>
-            <a href="#">Facebook</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-        </div>
-    </div>
-
-    <!-- Standard footer shared across all hmtl files on the site  -->
+    <!--Shared footer, copy and pasted from index page-->
     <footer>
         <p>&copy; 2026 Jessica's bioSite</p>
     </footer>
