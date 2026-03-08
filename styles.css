@@ -3,6 +3,7 @@
     Bellevue University 
     CSD-340 Module 7 assignment
     2/21/2026
+	Modified 3-7-26 Line 54 as per Tanners comments made correction to color
    
 
 
@@ -50,7 +51,7 @@ h2 {
 h3 {
     font-size: 1.3em;
     font-weight: 400;
-    color: #4A5568; /* greyish green for subheadings, I just went with it, under time crunch */
+    color: #A66B2E; /* greyish green for subheadings, I just went with it, under time crunch */ /* UPDATED COLOR FROM #4A5568 TO #A66B2E — DARKER WARM BROWN SO H3 DOESN'T BLEND INTO THE CREAM BACKGROUND */
     margin-top: 1em;
     margin-bottom: 0.4em;
 }
@@ -202,7 +203,7 @@ main {
 .intro-text {
     font-size: 1.5em;  /* icrease a bit to have more impact on page */
     text-align: center;
-    color: #4A5568;
+    color: #A66B2E; /* UPDATED FROM #4A5568 TO MATCH H3 — KEEPS INTRO-TEXT CONSISTENT WITH THE NEW SUBHEADING COLOR */
     margin: 1em 0 1.5em 0;
     font-style: italic;
 }
@@ -281,8 +282,8 @@ main {
     margin-top: 0;
 }
 
-
-/* Page nav container for top of page centers the nav buttons */
+/* commenting out all the lower navi button css. I could delete it but want to leave it here as an example*/
+/* Page nav container for top of page centers the nav buttons 
 .page-nav {
     display: flex;
     justify-content: center;
@@ -290,7 +291,7 @@ main {
     margin: 30px 0 20px 0;
 }
 
-/* styled anchor links that look like buttons, https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Styling_links */
+/* styled anchor links that look like buttons, https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Text_styling/Styling_links 
 .btn {
     display: inline-block;
     padding: 10px 28px;
@@ -305,10 +306,10 @@ main {
 }
 
 .btn:hover {
-    background-color: #D4A574; /* Gold on hover */
+    background-color: #D4A574; /* Gold on hover 
     color: #333333;
     text-decoration: none;
-}
+}*/
 
 
 /* Block of css for clickable image links
